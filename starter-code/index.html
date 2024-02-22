@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+
+  <body
+    class="lg:bg-[url('/starter-code/assets/home/background-home-desktop.jpg')] md:bg-[url('/starter-code/assets/home/background-home-tablet.jpg')] bg-[url('/starter-code/assets/home/background-home-mobile.jpg')] bg-[bottom_center] bg-cover min-h-screen leading-6 bg-no-repeat overflow-x-hidden text-[#F2F2F2] m-5 font-serif md:m-0 lg:grid lg:grid-rows-20 lg:pb-['max(6rem), 50vh']"
+  >
+    <a
+      href="#main"
+      class="sr-only absolute z-[9999] px-[1em] py-[.5em] m-auto bg-white text-black -translate-y-full transform duration-250 ease-in focus:translate-y-0"
+      >Skip to main content
+    </a>
+    <header
+      class="flex gap-1 justify-between lg:relative lg:after:absolute lg:after:top-20 lg:after:left-44 lg:after:w-[25%] lg:after:content-[''] lg:after:block lg:after:bg-[#9797979b] lg:after:h-[1px] lg:after:order-1"
+    >
+      <div class="md:m-[2rem] lg:m-[3.5rem]">
+        <img src="./assets/shared/logo.svg" alt="logo" />
+      </div>
+      <button
+        id="toggle"
+        class="list-none pb-16 gap-32 block absolute z-[2000] bg-no-repeat w-[1.5rem] aspect-square border-0 right-[1rem] top-[2rem] bg-[url('/starter-code/assets/shared/icon-hamburger.svg')] aria-[expanded=true]:bg-[url('/starter-code/assets/shared/icon-close.svg')] md:hidden"
+      >
+        <span aria-expanded="false" class="sr-only">Menu</span>
+      </button>
+      <nav class="lg:order-2">
+        <ul
+          data-visible="false"
+          id="primary-navigation"
+          class="bg-[#ffffff15] pointer data-[visible=true]:translate-x-0 md:data-[visible=false]:translate-x-0 transition duration-500 ease-in-out uppercase translate-x-full leading-[3] tracking-widest backdrop-blur-md flex text-lg font-extralight inset-y-0 left-[35%] right-0 py-[min(6rem,15vh)] pl-8 fixed flex-col cursor z-[1000] p-0 m-0 font-['Barlow_Condensed'] list-none md:backdrop-blur-sm md:flex md:flex-row md:gap-8 md:text-xl md:text-[#ffffffe5] md:h-[100px] md:py-8 md:px-16 lg:py-8 lg:px-32 lg:flex lg:flex-row lg:gap-16 lg:text-lg lg:backdrop-blur-[1px] lg:my-[2rem]"
+        >
+          <li
+            class="aria-selected md:pb-16 lg:pb-16 border-r-4 border-white border-r-[0.2rem_solid_white] md:border-r-0 md:border-b-[0.3rem_solid_white] md:border-b-4 md:border-white lg:border-b-[0.2rem_solid_white] lg:border-b-4 lg:border-white lg:pr-2 md:pr-2"
+          >
+            <a href="index.html" class="text-[#ffffffb1] font-light lg:flex">
+              <span
+                aria-hidden="true"
+                class="font-black md:hidden lg:flex lg:flex-row mr-[0.3em] text-[#ffffffe5]"
+                >00</span
+              >Home</a
+            >
+          </li>
+          <li
+            class="hover:border-r-4 hover:border-white hover:border-r-[0.2rem_solid_white] md:hover:border-r-0 lg:hover:border-r-0 md:pb-16 lg:pb-16 md:border-0 lg:border-0 md:border-b-['0.2rem solid white'] lg:border-b-['0.2rem solid white'] md:hover:border-b-4 lg:hover:border-b-4 md:focus:border-b-4 lg:focus:border-b-4 md:hover:focus:border-white lg:hover:focus:border-white lg:pr-2 md:pr-2"
+          >
+            <a href="destination-moon.html" class="text-[#ffffffb1] lg:flex"
+              ><span
+                aria-hidden="true"
+                class="md:hidden lg:flex lg:flex-row md:font-bold mr-[0.5em] text-[#ffffffe5]"
+                >01</span
+              >Destination
+            </a>
+          </li>
+          <li
+            class="hover:border-r-4 hover:border-white hover:border-r-[0.2rem_solid_white] md:hover:border-r-0 lg:hover:border-r-0 md:pb-16 lg:pb-16 md:border-0 lg:border-0 md:border-b-['0.2rem solid white'] lg:border-b-['0.2rem solid white'] md:hover:border-b-4 lg:hover:border-b-4 md:focus:border-b-4 lg:ocus:border-b-4 md:hover:focus:border-white lg:hover:focus:border-white lg:pr-2 md:pr-2"
+          >
+            <a href="crew-commander.html" class="text-[#ffffffb1] lg:flex"
+              ><span
+                aria-hidden="true"
+                class="md:hidden lg:flex lg:flex-row mr-[0.4em] text-[#ffffff]"
+                >02</span
+              >Crew
+            </a>
+          </li>
+          <li
+            class="hover:border-r-4 hover:border-white hover:border-r-[0.2rem_solid_white] md:hover:border-r-0 lg:hover:border-r-0 md:pb-16 lg:pb-16 md:border-0 lg:border-0 md:border-b-['0.2rem solid white'] lg:border-b-['0.2rem solid white'] md:hover:border-b-4 lg:hover:border-b-4 md:focus:border-b-4 lg:ocus:border-b-4 md:hover:focus:border-white lg:hover:focus:border-white"
+          >
+            <a href="technology.html" class="text-[#ffffffb1] lg:flex"
+              ><span
+                aria-hidden="true"
+                class="md:hidden lg:flex lg:flex-row mr-[0.5em] text-[#ffffff]"
+                >03</span
+              >Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main
+      id="main"
+      class="grid gap-[6rem] place-items-center justify-center text-center font-extralight m-auto p-4 h-screen md:justify-center md:gap-[11rem] md:h-[50%] md:w-[100%] md:px-[140px] md:py-[60px] lg:flex lg:text-left lg:grid-cols-24 lg:h-full"
+    >
+      <div class="py-0 md:w-[96%] lg:w-[38%]">
+        <p
+          class="text-[#D0D6F9] font-['Barlow_Condensed'] leading-10 text-lg md:text-3xl md:leading-tight tracking-widest"
+        >
+          SO, YOU WANT TO TRAVEL TO
+        </p>
+        <span
+          class="block font-['Bellefair'] text-7xl md:text-[152px] md:leading-tight md:tracking-wide leading-normal tracking-widest lg:text-[145px] lg:leading-normal"
+        >
+          SPACE
+        </span>
+        <p
+          class="text-[#d0d6f9be] font-['Barlow'] text-md leading-6 font-extralight md:text-lg md:leading-relaxed pt-0 lg:text-md"
+        >
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </p>
+      </div>
+
+      <div class="lg:flex lg:justify-end lg:items-start lg:w-[50%]">
+        <a
+          href="#explore"
+          class="relative inline-grid text-center text-2xl text-extralight md:text-4xl place-items-center rounded-full z-1 aspect-square no-underline font-['Bellefair'] text-black bg-white z-1 px-10 lg:px-14 lg:mt-32 md:px-14 py-0 after:content-[''] after:absolute after:-z-1 after:w-full after:h-full after:bg-[#ffffff15] after:rounded-[50%] after:opacity-0 after:transition after:duration-500 after:transform after:duration-750 after:ease-in-out hover:after:opacity-100 focus:after:scale-150 focus:after:opacity-100 hover:after:scale-150"
+          >EXPLORE</a
+        >
+      </div>
+    </main>
+
+    <script src="/script.js" defer></script>
+  </body>
+</html>

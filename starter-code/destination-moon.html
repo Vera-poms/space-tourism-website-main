@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+
+  <body
+    class="lg:bg-[url('/starter-code/assets/destination/background-destination-desktop.jpg')] md:bg-[url('/starter-code/assets/destination/background-destination-tablet.jpg')] bg-[url('/starter-code/assets/destination/background-destination-mobile.jpg')] bg-cover min-h-screen leading-6 bg-no-repeat overflow-x-hidden text-[#F2F2F2] m-5 font-serif md:m-0 lg:grid lg:grid-rows-20 lg:pb-['max(6rem), 50vh']"
+  >
+    <a
+      href="#main"
+      class="sr-only absolute z-[9999] px-[1em] py-[.5em] m-auto bg-white text-black -translate-y-full transform duration-250 ease-in focus:translate-y-0"
+      >Skip to main content
+    </a>
+    <header
+      class="flex gap-1 justify-between lg:relative lg:after:absolute lg:after:top-20 lg:after:left-44 lg:after:w-[25%] lg:after:content-[''] lg:after:block lg:after:bg-[#9797979b] lg:after:h-[1px] lg:after:order-1"
+    >
+      <div class="md:m-[2rem] lg:m-[3.5rem]">
+        <img src="./assets/shared/logo.svg" alt="logo" />
+      </div>
+      <button
+        id="toggle"
+        class="list-none pb-16 gap-32 block absolute z-[2000] bg-no-repeat w-[1.5rem] aspect-square border-0 right-[1rem] top-[2rem] bg-[url('/starter-code/assets/shared/icon-hamburger.svg')] aria-[expanded=true]:bg-[url('/starter-code/assets/shared/icon-close.svg')] md:hidden"
+      >
+        <span aria-expanded="false" class="sr-only">Menu</span>
+      </button>
+      <nav class="lg:order-2">
+        <ul
+          data-visible="false"
+          id="primary-navigation"
+          class="bg-[#ffffff15] pointer data-[visible=true]:translate-x-0 md:data-[visible=false]:translate-x-0 transition duration-500 ease-in-out uppercase translate-x-full leading-[3] tracking-widest backdrop-blur-md flex text-lg font-extralight inset-y-0 left-[35%] right-0 py-[min(6rem,15vh)] pl-8 fixed flex-col cursor z-[1000] p-0 m-0 font-['Barlow_Condensed'] list-none md:backdrop-blur-sm md:flex md:flex-row md:gap-8 md:text-xl md:text-[#ffffffe5] md:h-[100px] md:py-8 md:px-16 lg:py-8 lg:px-32 lg:flex lg:flex-row lg:gap-16 lg:text-lg lg:backdrop-blur-[1px] lg:my-[2rem]"
+        >
+          <li
+            class="md:pb-16 lg:pb-16 hover:border-r-4 hover:border-white hover:border-r-[0.2rem_solid_white] md:hover:border-r-0 md:hover:border-b-[0.3rem_solid_white] md:hover:border-b-4 md:border-white lg:pr-2 md:pr-2 md:focus:border-b-4 lg:focus:border-b-4 md:hover:focus:border-white lg:hover:focus:border-white"
+          >
+            <a href="index.html" class="text-[#ffffffb1] font-light lg:flex">
+              <span
+                aria-hidden="true"
+                class="font-black md:hidden lg:flex lg:flex-row mr-[0.3em] text-[#ffffffe5]"
+                >00</span
+              >Home</a
+            >
+          </li>
+          <li
+            aria-selected="true"
+            class="focus:border-r-4 focus:border-white hover:border-r-4 hover:border-[#d0d6f9be] border-r-[0.2rem_solid_white] md:border-r-0 md:hover:border-r-0 lg:border-r-0 lg:hover:border-r-0 md:pb-16 lg:pb-16 md:border-0 lg:border-0 md:border-b-['0.2rem solid white'] lg:border-b-['0.2rem solid white'] md:border-b-4 lg:border-b-4 lg:pr-2 md:pr-2"
+          >
+            <a href="destination.html" class="text-[#ffffffb1] lg:flex"
+              ><span
+                aria-hidden="true"
+                class="md:hidden lg:flex lg:flex-row md:font-bold mr-[0.5em] text-[#ffffff]"
+                >01</span
+              >Destination
+            </a>
+          </li>
+          <li
+            class="md:pb-16 lg:pb-16 md:border-r-0 md:hover:border-r-0 lg:border-r-0 lg:hover:border-r-0 md:hover:border-b-4 md:hover:border-[#d0d6f9be] lg:hover:border-b-4 lg:hover:border-[#d0d6f9be] md:focus:border-b-4 lg:ocus:border-b-4 md:focus:border-white lg:focus:border-white lg:pr-2 md:pr-2"
+          >
+            <a href="crew-commander.html" class="text-[#ffffffb1] lg:flex"
+              ><span
+                aria-hidden="true"
+                class="md:hidden lg:flex lg:flex-row mr-[0.4em] text-[#ffffff]"
+                >02</span
+              >Crew
+            </a>
+          </li>
+          <li
+            class="md:pb-16 lg:pb-16 md:border-r-0 md:hover:border-r-0 lg:border-r-0 lg:hover:border-r-0 md:hover:border-b-4 md:hover:border-[#d0d6f9be] lg:hover:border-b-4 lg:hover:border-[#d0d6f9be] md:focus:border-b-4 lg:focus:border-b-4 md:focus:border-white lg:focus:border-white"
+          >
+            <a href="technology-capsule.html" class="text-[#ffffffb1] lg:flex"
+              ><span
+                aria-hidden="true"
+                class="md:hidden lg:flex lg:flex-row mr-[0.5em] text-[#ffffff]"
+                >03</span
+              >Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main
+      id="main"
+      class="grid place-items-center justify-center text-center font-extralight m-auto p-4 h-screen md:justify-center md:gap-[2rem] md:h-[50%] md:w-[100%] md:px-[100px] md:pt-[50px] md:pb-[80px] lg:grid lg:text-left lg:grid-cols-2 lg:justify-items-start lg:h-full lg:pt-0 lg:pb-[60px] lg:pl-[150px] lg:pr-[40px]"
+    >
+      <p
+        class="text-[#ffff] font-['Barlow_Condensed'] uppercase leading-10 text-lg pb-[20px] md:text-2xl tracking-[0.14em] md:justify-self-start lg:col-span-2"
+      >
+        <span class="text-[#ffffffb1] font-light" aria-hidden="true">01</span>
+        Pick your destination
+      </p>
+      <picture id="moon-pic" class="max-w-[60%] lg:row-span-2 lg:max-w-[90%]">
+        <source
+          srcset="/starter-code/assets/destination/image-moon.webp"
+          type="image/webp"
+        />
+        <img src="/starter-code/assets/destination/image-moon.png" alt="moon" />
+      </picture>
+      <picture
+        hidden
+        id="mars-pic"
+        class="max-w-[60%] lg:row-span-2 lg:max-w-[90%]"
+      >
+        <source
+          srcset="/starter-code/assets/destination/image-mars.webp"
+          type="image/webp"
+        />
+        <img src="/starter-code/assets/destination/image-mars.png" alt="mars" />
+      </picture>
+      <picture
+        hidden
+        id="europa-pic"
+        class="max-w-[60%] lg:row-span-2 lg:max-w-[90%]"
+      >
+        <source
+          srcset="/starter-code/assets/destination/image-europa.webp"
+          type="image/webp"
+        />
+        <img
+          src="/starter-code/assets/destination/image-europa.png"
+          alt="europa"
+        />
+      </picture>
+      <picture
+        hidden
+        id="titan-pic"
+        class="max-w-[60%] lg:row-span-2 lg:max-w-[90%]"
+      >
+        <source
+          srcset="/starter-code/assets/destination/image-titan.webp"
+          type="image/webp"
+        />
+        <img
+          src="/starter-code/assets/destination/image-titan.png"
+          alt="titan"
+        />
+      </picture>
+
+      <div
+        id="tab-list"
+        role="tablist"
+        aria-label="destination list"
+        class="cursor-pointer flex gap-[1.5rem] leading-[2] text-lg font-extralight p-0 m-0 font-['Barlow_Condensed'] hover:pointer md:text-xl md:gap-[2.2rem] md:text-[#ffffffe5] lg:text-lg lg:col-span-1"
+      >
+        <button
+          aria-selected="true"
+          aria-controls="moon-tab"
+          data-image="moon-pic"
+          tabindex="0"
+          role="tab"
+          class="text-[#d0d6f9be] aria-[selected=true]:text-white aria-[selected=true]:border-b-4 aria-[selected=true]:border-white focus:text-white focus:border-b-4 focus:border-white uppercase tracking-widest md:pb-2 lg:p-0 md:focus:border-b-['0.2rem solid white'] lg:focus:border-b-['0.2rem solid white'] md:hover:border-b-4 md:hover:border-b-[#d0d6f9be] lg:hover:border-b-[#d0d6f9be]lg:hover:border-b-4"
+        >
+          Moon
+        </button>
+        <button
+          aria-selected="false"
+          aria-controls="mars-tab"
+          data-image="mars-pic"
+          tabindex="-1"
+          role="tab"
+          class="text-[#d0d6f9be] aria-[selected=true]:text-white aria-[selected=true]:border-b-4 aria-[selected=true]:border-white focus:text-white uppercase tracking-widest md:pb-2 lg:p-0 border-r-0 focus:border-b-4 focus:border-white md:hover:border-r-0 md:hover:border-b-4 md:hover:border-[#d0d6f9be] md:focus:border-b-4 lg:focus:border-b-4 md:focus:border-white lg:focus:border-white"
+        >
+          Mars
+        </button>
+        <button
+          aria-selected="false"
+          aria-controls="europa-tab"
+          data-image="europa-pic"
+          tabindex="-1"
+          role="tab"
+          class="text-[#d0d6f9be] aria-[selected=true]:text-white aria-[selected=true]:border-b-4 aria-[selected=true]:border-white focus:text-white uppercase tracking-widest md:pb-2 lg:p-0 border-r-0 focus:border-b-4 focus:border-white md:hover:border-r-0 md:hover:border-b-4 md:hover:border-[#d0d6f9be] md:focus:border-b-4 lg:focus:border-b-4 md:focus:border-white lg:focus:border-white"
+        >
+          Europa
+        </button>
+        <button
+          aria-selected="false"
+          aria-controls="titan-tab"
+          data-image="titan-pic"
+          tabindex="-1"
+          role="tab"
+          class="text-[#d0d6f9be] aria-[selected=true]:text-white aria-[selected=true]:border-b-4 aria-[selected=true]:border-white focus:text-white uppercase tracking-widest md:pb-2 lg:p-0 border-r-0 focus:border-b-4 focus:border-white md:hover:border-r-0 md:hover:border-b-4 md:hover:border-[#d0d6f9be] md:focus:border-b-4 lg:focus:border-b-4 md:hover:focus:border-white lg:hover:focus:border-white"
+        >
+          Titan
+        </button>
+      </div>
+
+      <article
+        role="tabpanel"
+        id="moon-tab"
+        tabindex="0"
+        class="lg:w-[71%] lg:h-[120%]"
+      >
+        <h2
+          class="block font-['Bellefair'] uppercase text-6xl md:text-[120px] md:leading-tight md:tracking-wide leading-normal tracking-widest lg:text-[105px] lg:leading-normal"
+        >
+          Moon
+        </h2>
+        <p
+          class="text-[#d0d6f9be] pb-[30px] border-b-[1px] border-[#979797] font-['Barlow'] text-md leading-6 font-extralight md:text-lg md:leading-relaxed pt-0 lg:text-md"
+        >
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+        <div
+          class="md:flex md:flex-row md:justify-evenly lg:justify-start lg:gap-16"
+        >
+          <div class="pt-[20px]">
+            <h3
+              class="font-['Barlow_Condensed'] uppercase text-lg text-[#d0d6f9be] tracking-[0.14em]"
+            >
+              Avg. distance
+            </h3>
+            <p
+              class="font-['Bellefair'] uppercase text-4xl font-thin leading-relaxed lg:text-3xl lg:leading-relaxed"
+            >
+              384,400 km
+            </p>
+          </div>
+
+          <div class="pt-[20px]">
+            <h3
+              class="font-['Barlow_Condensed'] uppercase text-lg text-[#d0d6f9be] tracking-[0.14em]"
+            >
+              Est. travel time
+            </h3>
+            <p
+              class="font-['Bellefair'] uppercase text-4xl font-thin leading-relaxed lg:text-3xl lg:leading-relaxed"
+            >
+              3 days
+            </p>
+          </div>
+        </div>
+      </article>
+      <article
+        role="tabpanel"
+        id="mars-tab"
+        tabindex="0"
+        hidden
+        class="lg:w-[71%] lg:h-[120%]"
+      >
+        <h2
+          class="block font-['Bellefair'] uppercase text-6xl md:text-[120px] md:leading-tight md:tracking-wide leading-normal tracking-widest lg:text-[105px] lg:leading-normal"
+        >
+          Mars
+        </h2>
+        <p
+          class="text-[#d0d6f9be] pb-[30px] border-b-[1px] border-[#979797] font-['Barlow'] text-md leading-6 font-extralight md:text-lg md:leading-relaxed pt-0 lg:text-md"
+        >
+          Don’t forget to pack your hiking boots. You’ll need them to tackle
+          Olympus Mons, the tallest planetary mountain in our solar system. It’s
+          two and a half times the size of Everest!
+        </p>
+        <div
+          class="md:flex md:flex-row md:justify-evenly lg:justify-start lg:gap-16"
+        >
+          <div class="pt-[20px]">
+            <h3
+              class="font-['Barlow_Condensed'] uppercase text-lg text-[#d0d6f9be] tracking-[0.14em]"
+            >
+              Avg. distance
+            </h3>
+            <p
+              class="font-['Bellefair'] uppercase text-4xl font-thin leading-relaxed lg:text-3xl lg:leading-relaxed"
+            >
+              225 mil. km
+            </p>
+          </div>
+
+          <div class="pt-[20px]">
+            <h3
+              class="font-['Barlow_Condensed'] uppercase text-lg text-[#d0d6f9be] tracking-[0.14em]"
+            >
+              Est. travel time
+            </h3>
+            <p
+              class="font-['Bellefair'] uppercase text-4xl font-thin leading-relaxed lg:text-3xl lg:leading-relaxed"
+            >
+              9 months
+            </p>
+          </div>
+        </div>
+      </article>
+      <article
+        role="tabpanel"
+        id="europa-tab"
+        tabindex="0"
+        hidden
+        class="lg:w-[71%] lg:h-[120%]"
+      >
+        <h2
+          class="block font-['Bellefair'] uppercase text-6xl md:text-[120px] md:leading-tight md:tracking-wide leading-normal tracking-widest lg:text-[105px] lg:leading-normal"
+        >
+          Europa
+        </h2>
+        <p
+          class="text-[#d0d6f9be] pb-[30px] border-b-[1px] border-[#979797] font-['Barlow'] text-md leading-6 font-extralight md:text-lg md:leading-relaxed pt-0 lg:text-md"
+        >
+          The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+          winter lover’s dream. With an icy surface, it’s perfect for a bit of
+          ice skating, curling, hockey, or simple relaxation in your snug
+          wintery cabin.
+        </p>
+        <div
+          class="md:flex md:flex-row md:justify-evenly lg:justify-start lg:gap-16"
+        >
+          <div class="pt-[20px]">
+            <h3
+              class="font-['Barlow_Condensed'] uppercase text-lg text-[#d0d6f9be] tracking-[0.14em]"
+            >
+              Avg. distance
+            </h3>
+            <p
+              class="font-['Bellefair'] uppercase text-4xl font-thin leading-relaxed lg:text-3xl lg:leading-relaxed"
+            >
+              628 mil. km
+            </p>
+          </div>
+
+          <div class="pt-[20px]">
+            <h3
+              class="font-['Barlow_Condensed'] uppercase text-lg text-[#d0d6f9be] tracking-[0.14em]"
+            >
+              Est. travel time
+            </h3>
+            <p
+              class="font-['Bellefair'] uppercase text-4xl font-thin leading-relaxed lg:text-3xl lg:leading-relaxed"
+            >
+              3 years
+            </p>
+          </div>
+        </div>
+      </article>
+      <article
+        role="tabpanel"
+        id="titan-tab"
+        tabindex="0"
+        hidden
+        class="lg:w-[71%] lg:h-[120%]"
+      >
+        <h2
+          class="block font-['Bellefair'] uppercase text-6xl md:text-[120px] md:leading-tight md:tracking-wide leading-normal tracking-widest lg:text-[105px] lg:leading-normal"
+        >
+          Titan
+        </h2>
+        <p
+          class="text-[#d0d6f9be] pb-[30px] border-b-[1px] border-[#979797] font-['Barlow'] text-md leading-6 font-extralight md:text-lg md:leading-relaxed pt-0 lg:text-md"
+        >
+          The only moon known to have a dense atmosphere other than Earth, Titan
+          is a home away from home (just a few hundred degrees colder!). As a
+          bonus, you get striking views of the Rings of Saturn.
+        </p>
+        <div
+          class="md:flex md:flex-row md:justify-evenly lg:justify-start lg:gap-16"
+        >
+          <div class="pt-[20px]">
+            <h3
+              class="font-['Barlow_Condensed'] uppercase text-lg text-[#d0d6f9be] tracking-[0.14em]"
+            >
+              Avg. distance
+            </h3>
+            <p
+              class="font-['Bellefair'] uppercase text-4xl font-thin leading-relaxed lg:text-3xl lg:leading-relaxed"
+            >
+              1.6 bil. km
+            </p>
+          </div>
+
+          <div class="pt-[20px]">
+            <h3
+              class="font-['Barlow_Condensed'] uppercase text-lg text-[#d0d6f9be] tracking-[0.14em]"
+            >
+              Est. travel time
+            </h3>
+            <p
+              class="font-['Bellefair'] uppercase text-4xl font-thin leading-relaxed lg:text-3xl lg:leading-relaxed"
+            >
+              7 years
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <script src="/script.js" defer></script>
+    <script src="/tabs.js" defer></script>
+  </body>
+</html>
