@@ -110,17 +110,17 @@
 
     <main
       id="main"
-      class="grid place-items-center justify-center text-center font-extralight m-auto p-4 h-[85vh] md:grid-rows-1 md:justify-center md:gap-[1rem] md:h-[90vh] md:w-[100%] md:pr-[100px] md:pl-[40px] md:pt-[50px] md:pb-0 lg:text-left lg:grid-cols-2 lg:justify-items-start lg:h-full lg:pt-0 lg:pb-0 lg:pl-[150px] lg:pr-[40px]"
+      class="grid place-items-center justify-center text-center font-extralight m-auto p-4 h-[85vh] md:grid-rows-1 md:justify-center md:gap-[2rem] md:h-[90vh] md:w-[100%] md:pt-0 md:pb-0 lg:text-left lg:grid-cols-2 lg:justify-items-start lg:h-full lg:pt-0 lg:pb-0 lg:pl-[150px] lg:pr-[40px]"
     >
       <p
-        class="text-[#ffff] font-['Barlow_Condensed'] uppercase leading-10 text-lg pb-[20px] md:text-2xl md:order-1 tracking-[0.14em] md:justify-self-start lg:order-1"
+        class="text-[#ffffff] font-['Barlow_Condensed'] uppercase leading-10 text-lg pb-[20px] md:pt-[25px] md:text-[24px] md:pb-0 md:tracking-[0.15em] md:pl-[25px] md:order-1 tracking-[0.14em] md:justify-self-start lg:order-1 lg:pt-0 lg:pl-0"
       >
         <span aria-hidden="true" class="text-[#ffffffb1] font-light">02</span>
         Meet your crew
       </p>
       <picture
         id="commander-pic"
-        class="max-w-[60%] md:order-4 md:border-0 md:self-end lg:max-w-[66%] lg:self-end lg:order-2 lg:row-span-3 lg:relative lg:-right-[20%]"
+        class="max-w-[65%] pb-[20px] md:max-w-[50%] md:order-4 md:border-0 md:self-end lg:max-w-[66%] lg:self-end lg:order-2 lg:row-span-3 lg:relative lg:-right-[20%] lg:pb-0"
       >
         <source
           srcset="/starter-code/assets/crew/image-douglas-hurley.webp"
@@ -138,7 +138,7 @@
       <picture
         hidden
         id="specialist-pic"
-        class="max-w-[60%] border-b-[1px] border-[#979797] md:order-4 md:border-0 md:self-end lg:max-w-[58%] lg:self-end lg:order-2 lg:row-span-3 lg:relative lg:-right-[7%]"
+        class="max-w-[60%] pb-[20px] md:max-w-[45%] md:order-4 md:border-0 md:self-end md:pt-[20px] lg:max-w-[58%] lg:self-end lg:order-2 lg:row-span-3 lg:relative lg:-right-[7%] lg:pb-0"
       >
         <source
           srcset="/starter-code/assets/crew/image-mark-shuttleworth.webp"
@@ -155,7 +155,7 @@
       <picture
         hidden
         id="pilot-pic"
-        class="max-w-[60%] border-b-[1px] border-[#979797] md:order-4 md:border-0 md:self-end lg:max-w-[74%] lg:self-end lg:order-2 lg:row-span-3 lg:relative lg:-right-[7%]"
+        class="max-w-[60%] pb-[20px] md:max-w-[56%] md:order-4 md:border-0 md:pt-[20px] md:self-end lg:max-w-[74%] lg:self-end lg:order-2 lg:row-span-3 lg:relative lg:-right-[7%] lg:pb-0"
       >
         <source
           srcset="/starter-code/assets/crew/image-victor-glover.webp"
@@ -172,7 +172,7 @@
       <picture
         hidden
         id="engineer-pic"
-        class="max-w-[60%] border-b-[1px] border-[#979797] md:order-4 md:border-0 md:self-end lg:max-w-[80%] lg:self-end lg:order-2 lg:row-span-3 lg:relative lg:-right-[7%]"
+        class="max-w-[60%] pb-[20px] md:max-w-[65%] md:order-4 md:border-0 md:pt-[20px] md:self-end lg:max-w-[80%] lg:self-end lg:order-2 lg:row-span-3 lg:relative lg:-right-[7%] lg:pb-0"
       >
         <source
           srcset="/starter-code/assets/crew/image-anousheh-ansari.webp"
@@ -190,7 +190,7 @@
         id="tab-list"
         role="tablist"
         aria-label="crew tabs"
-        class="flex cursor-pointer md:order-3 md:pt-3 lg:order-4 lg:row-span-1 lg:pb-[60px]"
+        class="flex pb-[20px] cursor-pointer md:order-3 md:pt-3 lg:order-4 lg:row-span-1 lg:pb-[60px]"
       >
         <button
           aria-selected="true"
@@ -198,7 +198,7 @@
           role="tab"
           tabindex="0"
           data-image="commander-pic"
-          class="border-0 rounded-[50%] p-[0.5em] bg-[#fffffff7] mr-5"
+          class="border-0 rounded-[50%] p-[0.5em] bg-[#9797979b] mr-5 lg:aria-[selected=true]:bg-[#ffffff] lg:hover:bg-[#979797]"
         >
           <span class="sr-only">The Commander</span>
         </button>
@@ -208,7 +208,7 @@
           role="tab"
           tabindex="-1"
           data-image="specialist-pic"
-          class="border-0 rounded-[50%] p-[.5em] bg-[#9797979b] mr-5"
+          class="border-0 rounded-[50%] p-[.5em] bg-[#9797979b] mr-5 lg:aria-[selected=true]:bg-[#ffffff] lg:hover:bg-[#979797]"
         >
           <span class="sr-only">The Mission Specialist</span>
         </button>
@@ -218,7 +218,7 @@
           role="tab"
           tabindex="-1"
           data-image="pilot-pic"
-          class="border-0 rounded-[50%] p-[.5em] bg-[#9797979b] mr-5"
+          class="border-0 rounded-[50%] p-[.5em] bg-[#9797979b] mr-5 lg:aria-[selected=true]:bg-[#ffffff] lg:hover:bg-[#979797]"
         >
           <span class="sr-only">The pilot</span>
         </button>
@@ -228,7 +228,7 @@
           role="tab"
           tabindex="-1"
           data-image="engineer-pic"
-          class="border-0 rounded-[50%] p-[.5em] bg-[#9797979b]"
+          class="border-0 rounded-[50%] p-[.5em] bg-[#9797979b] lg:aria-[selected=true]:bg-[#ffffff] lg:hover:bg-[#979797]"
         >
           <span class="sr-only">The crew engineer</span>
         </button>
@@ -237,20 +237,20 @@
         role="tabpanel"
         tabindex="0"
         id="commander-tab"
-        class="md:order-2 md:w-[69%] lg:order-2 lg:pb-[10px] lg:w-full"
+        class="w-[102%] md:order-2 md:w-[91%] md:pl-[102px] md:pr-[102px] lg:order-2 lg:pb-[10px] lg:pl-0 lg:pr-0 lg:w-full"
       >
         <h4
-          class="font-['Bellefair'] text-[#979797] text-xl uppercase lg:text-[32px]"
+          class="font-['Bellefair'] text-[#979797] text-[16px] uppercase md:text-[24px] md:leading-relaxed lg:text-[32px]"
         >
           Commander
         </h4>
         <h2
-          class="font-['Bellefair'] text-2xl pb-2 pt-1 uppercase lg:text-[54px] lg:leading-[1em] lg:tracking-wide lg:pt-4 lg:pb-6"
+          class="font-['Bellefair'] text-[24px] pb-2 pt-1 uppercase md:text-[40px] md:leading-snug lg:text-[54px] lg:leading-[1em] lg:tracking-wide lg:pt-4 lg:pb-6"
         >
           Douglas Hurley
         </h2>
         <p
-          class="font-['Barlow'] text-sm text-[#d0d6f9be] lg:text-lg lg:w-[69%] lg:pb-[30px]"
+          class="font-['Barlow'] text-[15px] leading-relaxed text-[#d0d6f9be] md:text-[16px] md:leading-7 lg:text-lg lg:w-[69%] lg:pb-[30px]"
         >
           Douglas Gerald Hurley is an American engineer, former Marine Corps
           pilot and former NASA astronaut. He launched into space for the third
@@ -262,20 +262,20 @@
         tabindex="0"
         id="specialist-tab"
         hidden
-        class="md:order-2 md:w-[69%] lg:order-2 lg:pb-[10px] lg:w-full"
+        class="w-[108%] md:order-2 md:w-[91%] md:pl-[83px] md:pr-[83px] lg:order-2 lg:pb-[10px] lg:pl-0 lg:pr-0 lg:w-full"
       >
         <h4
-          class="font-['Bellefair'] text-[#979797] text-xl uppercase lg:text-[32px]"
+          class="font-['Bellefair'] text-[#979797] text-[16px] uppercase md:text-[24px] md:leading-relaxed lg:text-[32px]"
         >
           Mission Specialist
         </h4>
         <h2
-          class="font-['Bellefair'] text-2xl pb-2 pt-1 uppercase lg:text-[50px] lg:leading-[1em] lg:tracking-[0.028em] lg:pt-4 lg:pb-6"
+          class="font-['Bellefair'] text-[24px] pb-2 pt-1 uppercase md:text-[40px] md:leading-snug lg:text-[50px] lg:leading-[1em] lg:tracking-[0.028em] lg:pt-4 lg:pb-6"
         >
           Mark Shuttleworth
         </h2>
         <p
-          class="font-['Barlow'] text-sm text-[#d0d6f9be] lg:text-lg lg:w-[71%]"
+          class="font-['Barlow'] text-[15px] text-[#d0d6f9be] md:text-[16px] md:leading-7 lg:text-lg lg:w-[71%]"
         >
           Mark Richard Shuttleworth is the founder and CEO of Canonical, the
           company behind the Linux-based Ubuntu operating system. Shuttleworth
@@ -287,20 +287,20 @@
         tabindex="0"
         id="pilot-tab"
         hidden
-        class="md:order-2 md:w-[69%] lg:order-2 lg:pb-[10px] lg:w-full"
+        class="md:order-2 md:w-[91%] md:pl-[36px] md:pr-[36px] lg:order-2 lg:pb-[10px] lg:pl-0 lg:pr-0 lg:w-full"
       >
         <h4
-          class="font-['Bellefair'] text-[#979797] text-xl uppercase lg:text-[32px]"
+          class="font-['Bellefair'] text-[#979797] text-xl uppercase md:text-[24px] md:leading-relaxed lg:text-[32px]"
         >
           Pilot
         </h4>
         <h2
-          class="font-['Bellefair'] text-2xl pb-2 pt-1 uppercase lg:text-[56px] leading-[1em] lg:trackin-wide lg:pt-4 lg:pb-6"
+          class="font-['Bellefair'] text-2xl pb-2 pt-1 uppercase md:text-[40px] md:leading-snug lg:text-[56px] leading-[1em] lg:trackin-wide lg:pt-4 lg:pb-6"
         >
           Victor Glover
         </h2>
         <p
-          class="font-['Barlow'] text-sm text-[#d0d6f9be] lg:text-lg lg:w-[72%]"
+          class="font-['Barlow'] text-sm text-[#d0d6f9be] md:text-[16px] md:leading-7 lg:text-lg lg:w-[72%]"
         >
           Pilot on the first operational flight of the SpaceX Crew Dragon to the
           International Space Station. Glover is a commander in the U.S. Navy
@@ -313,20 +313,20 @@
         tabindex="0"
         id="engineer-tab"
         hidden
-        class="md:order-2 md:w-[69%] lg:order-2 lg:pb-[10px] lg:w-full"
+        class="md:order-2 md:w-[91%] md:pl-[77px] md:pr-[77px] lg:order-2 lg:pb-[10px] lg:pl-0 lg:pr-0 lg:w-full"
       >
         <h4
-          class="font-['Bellefair'] text-[#979797] text-xl uppercase lg:text-[32px]"
+          class="font-['Bellefair'] text-[#979797] text-xl uppercase md:text-[24px] md:leading-relaxed lg:text-[32px]"
         >
           Flight Engineer
         </h4>
         <h2
-          class="font-['Bellefair'] text-2xl pb-2 pt-1 uppercase lg:text-[60px] lg:leading-[1em] lg:pt-4 lg:pb-6"
+          class="font-['Bellefair'] text-2xl pb-2 pt-1 uppercase md:text-[40px] md:leading-snug lg:text-[60px] lg:leading-[1em] lg:pt-4 lg:pb-6"
         >
           Anousheh Ansari
         </h2>
         <p
-          class="font-['Barlow'] text-sm text-[#d0d6f9be] lg:text-lg lg:w-[71%]"
+          class="font-['Barlow'] text-sm text-[#d0d6f9be] md:text-[16px] md:leading-7 lg:text-lg lg:w-[71%]"
         >
           Anousheh Ansari is an Iranian American engineer and co-founder of
           Prodea Systems. Ansari was the fourth self-funded space tourist, the
